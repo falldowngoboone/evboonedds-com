@@ -1,0 +1,12 @@
+---
+layout: default
+containerClass: c-page o-stack
+eleventyComputed:
+  headContent: |
+    {{ headContent }}
+  scriptContent: |
+    {{ scriptContent }}
+---
+
+{% include "c-page-title.njk" %}
+{{ content | safe }}

@@ -1,0 +1,100 @@
+@use 'settings' as *;
+@use 'tools' as t;
+
+html {
+  font-family: $font-body;
+  font-size: 17 / 16 * 100%;
+  line-height: 1.5;
+  color: var(--color-main);
+  background: var(--color-bg, white);
+
+  @include t.md-up {
+    font-size: 18 / 16 * 100%;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+
+  code {
+    -webkit-text-fill-color: initial;
+  }
+}
+
+a:not([class]) {
+  color: var(--link-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-display;
+  font-weight: 900;
+  color: var(--color-subheading);
+}
+
+h1 {
+  font-size: 36 / 17 * 1rem;
+  line-height: 2.25rem;
+  color: var(--color-heading);
+
+  @include t.md-up {
+    font-size: 49 / 18 * 1rem;
+    line-height: 3rem;
+  }
+
+  @include t.lg-up {
+    font-size: 57 / 18 * 1rem;
+    line-height: 3.75rem;
+  }
+}
+
+h2 {
+  font-size: 24 / 17 * 1rem;
+  line-height: 1.5rem;
+
+  @include t.md-up {
+    font-size: 32 / 18 * 1rem;
+    line-height: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 21 / 17 * 1rem;
+  line-height: 1.5rem;
+
+  @include t.md-up {
+    font-size: 24 / 18 * 1rem;
+  }
+}
+
+code:not(pre code) {
+  background-color: var(--code-bg);
+  color: var(--code-color);
+  font-family: $font-mono;
+  font-size: 0.875em;
+  padding: 0.125em 0.5em;
+  border-radius: 0.125em;
+  border: solid 1px var(--code-border);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+svg {
+  fill: currentColor;
+}
+
+blockquote,
+q {
+  font-style: italic;
+}
+
+blockquote {
+  padding-left: 1.5rem;
+  border-left: solid 1px var(--color-border);
+}
+
+figcaption {
+  font-style: italic;
+  font-size: smaller;
+}

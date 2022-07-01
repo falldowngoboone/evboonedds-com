@@ -1,0 +1,20 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+    - topTags
+  addAllPagesToCollections: true
+layout: page
+permalink: /tags/{{ tag }}/
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+---
+
+{% set postList = collections[tag] | reverse %} {% include "c-post-list.njk" %}

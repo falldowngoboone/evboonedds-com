@@ -1,32 +1,44 @@
 {
-  "name": "evboonedds-com",
-  "version": "0.1.0",
+  "name": "$$PROJECT_NAME",
+  "version": "0.0.1",
+  "description": "$$PROJECT_DESCRIPTION",
   "main": "index.js",
-  "repository": "git@github.com:falldowngoboone/evboonedds-com.git",
-  "author": "Ryan Boone <falldowngoboone@gmail.com>",
-  "license": "UNLICENSED",
-  "private": true,
   "scripts": {
-    "build": "npm-run-all clean build:*",
-    "build:css": "sass ./src/sass/:./_site/css/",
-    "build:html": "eleventy --input=src",
-    "build:webpack": "webpack --env.production",
-    "clean": "rimraf _site",
-    "watch": "run-p watch:*",
-    "watch:css": "sass --watch ./src/sass/:./_site/css/",
-    "watch:html": "eleventy --serve --input=src",
-    "watch:webpack": "webpack",
-    "start": "npm run watch"
+    "start": "npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf _site",
+    "build": "npm-run-all clean --parallel \"build:css -- -s compressed\" build:ssg",
+    "build:css": "sass src/scss:_site/css",
+    "build:ssg": "eleventy",
+    "watch": "npm-run-all clean --parallel watch:*",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:ssg": "npm run build:ssg -- --serve --port=3000",
+    "debug": "DEBUG=Eleventy* npm run build:ssg"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+$$PROJECT_REPO_URL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "$$PROJECT_REPO_URL/issues"
+  },
+  "homepage": "$$PROJECT_REPO_URL#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "dotenv": "^8.2.0",
-    "liquidjs": "^9.11.10",
-    "mkdirp": "^1.0.3",
+    "@11ty/eleventy": "^1.0.0-beta.8",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@11ty/eleventy-upgrade-help": "^1.0.1",
+    "luxon": "^1.25.0",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-attrs": "^4.1.3",
+    "markdown-it-footnote": "^3.0.2",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "sass": "^1.26.1",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "reading-time": "^1.2.0",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
   }
 }

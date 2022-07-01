@@ -1,0 +1,27 @@
+@use 'settings' as *;
+@use 'tools' as t;
+
+.c-nav {
+  --link-color: var(--color-main);
+
+  display: flex;
+  gap: var(--link-padding);
+  align-items: center;
+  flex-wrap: wrap;
+
+  & a {
+    font-weight: 700;
+    text-transform: lowercase;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      --link-color: #df0036;
+    }
+  }
+
+  & [aria-current='page'] {
+    --link-color: #df0036;
+    text-decoration: underline;
+  }
+}

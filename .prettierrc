@@ -1,12 +1,6 @@
 {
+  "endOfLine": "lf",
   "singleQuote": true,
-  "trailingComma": "es5",
-  "overrides": [
-    {
-      "files": "*.liquid",
-      "options": {
-        "parser": "html"
-      }
-    }
-  ]
+  "tabWidth": 2,
+  "trailingComma": "es5"
 }

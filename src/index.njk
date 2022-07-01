@@ -1,0 +1,44 @@
+---
+layout: default
+title: Home
+displayTitle: Full-stack front end development
+---
+
+<header class="c-hero o-stack">
+  {% include "c-page-title.njk" %}
+  <p>
+    Hi, I’m Ryan Boone. I’m a web developer and designer from Texas with a
+    passion for open, accessible front end development. I love exploring new
+    ideas and sharing the lessons I’ve learned along the way with others. If you
+    want to work with me, book me for a speaking engagement, or just want to
+    talk shop, <a href="https://twitter.com/therealboone">drop me a line</a>!
+  </p>
+</header>
+<div class="l-split">
+  {% if collections.post %}
+  <div class="o-stack">
+    <h2>Recent Posts</h2>
+    {% set postList = collections.post.slice(-20) | reverse %}
+    {% set postListCounter = collections.post | length %}
+    {% set headingLevel = "h3" %}
+    {% include "c-post-list.njk" %}
+    <p>For older posts, visit the <a href="/blog">archive</a>.</p>
+  </div>
+  {% endif %}
+  <div class="o-stack">
+    {% if collections.topTags %}
+    <h2>Top Tags</h2>
+    <ol>
+      {% for tag in collections.topTags %}<li>{% tagLink tag.tag %} ({{ tag.count }})</li>{% endfor %}
+    </ol>
+    {% endif %}
+    <h2>Popular Posts</h2>
+    <ol>
+      <li><a href="/blog/talk-to-your-react-components-with-custom-events/">Talk to your React components with custom events</a></li>
+      <li><a href="/blog/share-variables-between-javascript-and-css/">Share variables between JavaScript and CSS</a></li>
+      <li><a href="/blog/the-curious-case-of-flexbox-gap-and-safari/">The curious case of flexbox gap and Safari</a></li>
+      <li><a href="/blog/native-form-validation-with-javascript/">Native form validation with JavaScript</a></li>
+      <li><a href="/blog/kicking-sass-to-the-curb/">Kicking Sass to the curb</a></li>
+    </ol>
+  </div>
+</div>
