@@ -10,16 +10,22 @@
   <nav>
     <ul class="c-nav">
       <li>
-        <a {% if page.url == '/blog/' %} aria-current="page" {% endif %} href="/#about">About</a>
+        <a href="/#about">About</a>
       </li>
       <li>
-        <a {% if page.url == '/blog/' %} aria-current="page" {% endif %} href="/#about">Services</a>
+        <a href="/#services">Services</a>
       </li>
       <li>
-        <a {% if page.url == '/blog/' %} aria-current="page" {% endif %} href="/#about">New Patient Forms</a>
+        <details>
+          <summary>New Patient Forms</summary>
+          <ul>
+            <li><a href="/downloads/form.pdf" target="_blank">Adult Patient Form</a></li>
+            <li><a href="/downloads/child-form.pdf" target="_blank">Child Patient Form</a></li>
+          </ul>
+        </details>
       </li>
       <li>
-        <a {% if page.url == '/blog/' %} aria-current="page" {% endif %} href="/#about">Contact</a>
+        <a href="/#contact">Contact</a>
       </li>
     </ul>
   </nav>
