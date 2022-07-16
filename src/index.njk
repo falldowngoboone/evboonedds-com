@@ -1,44 +1,86 @@
 ---
 layout: default
 title: Home
-displayTitle: Full-stack front end development
+displayTitle: Exceptional dental and orthodontic care for all ages
 ---
 
 <header class="c-hero o-stack">
   {% include "c-page-title.njk" %}
   <p>
-    Hi, I’m Ryan Boone. I’m a web developer and designer from Texas with a
-    passion for open, accessible front end development. I love exploring new
-    ideas and sharing the lessons I’ve learned along the way with others. If you
-    want to work with me, book me for a speaking engagement, or just want to
-    talk shop, <a href="https://twitter.com/therealboone">drop me a line</a>!
+    We desire to provide a caring, courteous environment for our patients and have an experienced, friendly staff who are
+    ready to give you the quality dental health care you deserve.
   </p>
 </header>
-<div class="l-split">
-  {% if collections.post %}
-  <div class="o-stack">
-    <h2>Recent Posts</h2>
-    {% set postList = collections.post.slice(-20) | reverse %}
-    {% set postListCounter = collections.post | length %}
-    {% set headingLevel = "h3" %}
-    {% include "c-post-list.njk" %}
-    <p>For older posts, visit the <a href="/blog">archive</a>.</p>
-  </div>
-  {% endif %}
-  <div class="o-stack">
-    {% if collections.topTags %}
-    <h2>Top Tags</h2>
-    <ol>
-      {% for tag in collections.topTags %}<li>{% tagLink tag.tag %} ({{ tag.count }})</li>{% endfor %}
-    </ol>
-    {% endif %}
-    <h2>Popular Posts</h2>
-    <ol>
-      <li><a href="/blog/talk-to-your-react-components-with-custom-events/">Talk to your React components with custom events</a></li>
-      <li><a href="/blog/share-variables-between-javascript-and-css/">Share variables between JavaScript and CSS</a></li>
-      <li><a href="/blog/the-curious-case-of-flexbox-gap-and-safari/">The curious case of flexbox gap and Safari</a></li>
-      <li><a href="/blog/native-form-validation-with-javascript/">Native form validation with JavaScript</a></li>
-      <li><a href="/blog/kicking-sass-to-the-curb/">Kicking Sass to the curb</a></li>
-    </ol>
-  </div>
+<div class="o-stack">
+  <h2>About</h2>
+  <p>For over 40 years, we at Dr. E.V. Boone’s office have made patient well-being our top priority. We have provided
+    informative consultations, a variety of general dentistry, and orthodontic procedures in a comfortable, safe
+    environment. We are committed to the highest standards of dental care, continuing our educational training to offer
+    modern techniques and advancements for our patients.</p>
+  <p>Our facility uses the highest quality materials and state-of-the-art dental technology to give patients a notably
+    satisfying result. We also offer a full range of dental healthcare and treatment options for all ages based on
+    individual desires and needs. At Dr. Boone’s, we strive to provide the most excellent, comprehensive care possible.</p>
+</div>
+<div class="o-stack">
+  <h2>Services</h2>
+  <h3>Orthodontics</h3>
+  <p>We understand how important it is to have confidence in your smile, which is why we are pleased to offer an array of
+    orthodontic services. Each patient’s needs are different and are evaluated individually. We will develop a treatment
+    plan that will best suit you.</p>
+  <p>We offer metal, porcelain, and invisible braces (SmartSmile) for children and adults. If you are interested in
+    finding out more about how orthodontics can help you achieve a beautiful smile, or for questions about our orthodontic
+    treatment options, please call our office at (409) 769-4433 to schedule an appointment.</p>
+  <h3>Cosmetic Dentistry</h3>
+  <p>Your smile is important. That's why Dr. Boone works with high-quality materials and a full-service dental laboratory
+    to achieve accurate and comfortable results. We offer a full range of cosmetic services, from brightening your smile to
+    restoring proper mouth function, including eating and speaking.</p>
+  <ul>
+    <li>Porcelain Veneers</li>
+    <li>Fillings and Bonding</li>
+    <li>Dental Implants</li>
+    <li>Bridges</li>
+    <li>Dentures and Partials</li>
+    <li>Porcelain and Precious Metal Crowns</li>
+    <li>Teeth Whitening</li>
+  </ul>
+  <h3>Preventive Care</h3>
+  <p>Regularly scheduled dental maintenance aids in overall health as well as reduces the chance of major long-term damage
+    and total dental costs. Dr. Boone's office offers routine oral examinations and cleanings to help keep your teeth
+    healthy.
+  </p>
+  <p>Our comprehensive exam includes a complete oral examination and a full mouth series of 20 x-rays or a panoramic film
+    and bite-wing x-rays used to screen for active decay and periodontal diseases. We will also discuss your dental history
+    and any options you may need to maintain healthy teeth and gums or restore problem areas, as well as review any
+    additional desires and/or concerns you may have.</p>
+  <p>Having a hygienist perform thorough, routine cleanings is one of the best preventative measures you can take to
+    maintain healthy teeth and gums. Our hygienists are licensed professionals who help evaluate problem areas and implement
+    treatment plans based on patient needs.</p>
+</div>
+<div class="o-stack">
+  <h2>Contact</h2>
+  <h3>Appointments and Cancelations</h3>
+  <p>To schedule an appointment, please call our office at (409) 769-4433. If for any reason you need to cancel or
+    reschedule, please notify us by phone 24-hours in advance.</p>
+  <h3>Insurance and Payment Options</h4>
+  <p>Our office accepts most insurance plans, and we will gladly submit all insurance claims for you in a timely manner.
+    We accept check, cash, or any major credit card.</p>
+  <p>To help you afford the treatments you need and want, we have also partnered with CareCredit, a payment program that
+    gives patients a cost conscious financial option when paying medical expenses. Once approved, you can begin treatments
+    when needed and pay in monthly installments depending upon the plan you choose. Please visit
+    <a href="http://www.carecredit.com/">CareCredit.com</a>
+    for more information.</p>
+  <p>If you have questions regarding insurance information and payment options, call our office today at (409) 769-4433.</p>
+  <h3>Location and Hours of Operation</h3>
+  <p>Dr. E.V. Boone<br/>1090 N Main Street<br/>Vidor, TX 77662-4357<br/>Phone: (409) 769-4433<br/>Fax: (409) 769-4418</p>
+  <p>Our office is open Monday through Thursday from 8:00 a.m. to 5:00 p.m.</p>
+  <h3>Holiday Closings</h3>
+  <p>We observe most Federal holidays and are closed for the following calendar days:</p>
+  <ul>
+    <li>New Years Day</li>
+    <li>Memorial Day</li>
+    <li>Independence Day</li>
+    <li>Labor Day</li>
+    <li>Thanksgiving Day and the Friday after</li>
+    <li>Christmas Eve and Christmas Day</li>
+  </ul>
 </div>

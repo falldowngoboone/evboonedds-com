@@ -1,7 +1,7 @@
 {
-  "name": "$$PROJECT_NAME",
+  "name": "evboonedds-com",
   "version": "0.0.1",
-  "description": "$$PROJECT_DESCRIPTION",
+  "description": "Web source for evboonedds.com",
   "main": "index.js",
   "scripts": {
     "start": "npm run watch",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+$$PROJECT_REPO_URL.git"
+    "url": "git+https://github.com/falldowngoboone/evboonedds-com.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "$$PROJECT_REPO_URL/issues"
+    "url": "https://github.com/falldowngoboone/evboonedds-com/issues"
   },
-  "homepage": "$$PROJECT_REPO_URL#readme",
+  "homepage": "https://github.com/falldowngoboone/evboonedds-com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.8",
     "@11ty/eleventy-plugin-rss": "^1.1.1",

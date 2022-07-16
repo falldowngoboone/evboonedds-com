@@ -41,9 +41,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary('md', markdownParser());
 
-  eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy(
-    'src/**/*.(png|jpg|jpeg|gif|svg|webp|avif)'
+    'src/**/*.(png|jpg|jpeg|gif|svg|webp|avif|pdf)'
   );
   eleventyConfig.addPassthroughCopy('src/js');
 

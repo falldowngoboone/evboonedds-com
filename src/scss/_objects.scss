@@ -52,7 +52,7 @@
   --page-col-gap: 1em;
 
   display: grid;
-  grid-template-columns: 1fr minmax(0, 1034px) 1fr;
+  grid-template-columns: 1fr minmax(0, 1920px) 1fr;
   row-gap: var(--page-row-gap);
   column-gap: var(--page-col-gap);
 
@@ -62,10 +62,7 @@
 
   @include t.md-up {
     --page-row-gap: 2em;
-    --page-col-gap: 1.5em;
-
-    row-gap: 2em;
-    column-gap: 1.5em;
+    --page-col-gap: 3em;
   }
 }
 

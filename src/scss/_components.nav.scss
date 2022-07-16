@@ -5,13 +5,13 @@
   --link-color: var(--color-main);
 
   display: flex;
-  gap: var(--link-padding);
+  gap: calc(var(--link-padding) * 2);
   align-items: center;
   flex-wrap: wrap;
 
   & a {
+    @include t.uppercase;
     font-weight: 700;
-    text-transform: lowercase;
     text-decoration: none;
     position: relative;
 

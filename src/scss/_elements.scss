@@ -1,15 +1,16 @@
+@use 'sass:math';
 @use 'settings' as *;
 @use 'tools' as t;
 
 html {
   font-family: $font-body;
-  font-size: 17 / 16 * 100%;
+  font-size: math.div(17, 16) * 100%;
   line-height: 1.5;
   color: var(--color-main);
   background: var(--color-bg, white);
 
   @include t.md-up {
-    font-size: 18 / 16 * 100%;
+    font-size: math.div(18, 16) * 100%;
   }
 }
 
@@ -26,46 +27,43 @@ a:not([class]) {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: $font-display;
-  font-weight: 900;
+  font-weight: normal;
   color: var(--color-subheading);
 }
 
 h1 {
-  font-size: 36 / 17 * 1rem;
+  font-size: math.div(36, 17) * 1rem;
   line-height: 2.25rem;
   color: var(--color-heading);
 
   @include t.md-up {
-    font-size: 49 / 18 * 1rem;
+    font-size: math.div(49, 18) * 1rem;
     line-height: 3rem;
   }
 
   @include t.lg-up {
-    font-size: 57 / 18 * 1rem;
+    font-size: math.div(57, 18) * 1rem;
     line-height: 3.75rem;
   }
 }
 
 h2 {
-  font-size: 24 / 17 * 1rem;
+  font-size: math.div(24, 17) * 1rem;
   line-height: 1.5rem;
 
   @include t.md-up {
-    font-size: 32 / 18 * 1rem;
+    font-size: math.div(32, 18) * 1rem;
     line-height: 2.25rem;
   }
 }
 
 h3 {
-  font-size: 21 / 17 * 1rem;
+  @include t.uppercase;
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 1.5rem;
-
-  @include t.md-up {
-    font-size: 24 / 18 * 1rem;
-  }
 }
 
 code:not(pre code) {

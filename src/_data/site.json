@@ -1,27 +1,6 @@
 {
-  "branding": "falldowngoboone",
-  "title": "Full-Stack Front End Development",
-  "description": "The ramblings of Ryan Boone, a web developer and designer from Texas with a passion for open, accessible front end development.",
-  "url": "https://www.falldowngoboone.com",
-  "metadata": {
-    "title": "falldowngoboone",
-    "url": "https://www.falldowngoboone.com/",
-    "language": "en",
-    "description": "The ramblings of Ryan Boone, a web developer and designer from Texas with a passion for open, accessible front end development.",
-    "feed": {
-      "subtitle": "The ramblings of Ryan Boone, a web developer and designer from Texas with a passion for open, accessible front end development.",
-      "filename": "feed.xml",
-      "path": "/feed/feed.xml",
-      "id": "https://www.falldowngoboone.com/"
-    },
-    "jsonfeed": {
-      "path": "/feed/feed.json",
-      "url": "https://www.falldowngoboone.com/feed/feed.json"
-    },
-    "author": {
-      "name": "Ryan Boone",
-      "email": "falldowngoboone@gmail.com",
-      "url": "https://www.falldowngoboone.com/"
-    }
-  }
+  "name": "E.V. Boone, DDS",
+  "title": "Quality Dental Health Care You Deserve",
+  "description": "Committed to the highest standards of dental care for all ages.",
+  "url": "https://www.evboonedds.com"
 }
