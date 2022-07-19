@@ -2,9 +2,8 @@
 @use 'tools' as t;
 
 .c-footer {
-  --link-color: var(--color-secondary);
-
   color: var(--color-secondary);
+  background: var(--color-footer-background);
   padding: 1rem 0;
 
   @include t.md-up {

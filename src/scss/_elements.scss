@@ -4,78 +4,50 @@
 
 html {
   font-family: $font-body;
-  font-size: math.div(17, 16) * 100%;
+  font-size: 100%;
   line-height: 1.5;
-  color: var(--color-main);
+  color: var(--color-text-main);
   background: var(--color-bg, white);
+}
 
-  @include t.md-up {
-    font-size: math.div(18, 16) * 100%;
-  }
+body {
+  font-size: var(--step-0);
 }
 
 a:hover {
   text-decoration: none;
-
-  code {
-    -webkit-text-fill-color: initial;
-  }
 }
 
 a:not([class]) {
-  color: var(--link-color);
+  color: var(--color-text-link);
+
+  &:hover {
+    color: var(--color-text-link-hover);
+  }
 }
 
 h1,
-h2 {
+h2, 
+h3 {
   font-family: $font-display;
-  font-weight: normal;
   color: var(--color-subheading);
+  font-weight: 700;
 }
 
 h1 {
-  font-size: math.div(36, 17) * 1rem;
-  line-height: 2.25rem;
+  font-size: var(--step-3);
+  line-height: 1.1em;
   color: var(--color-heading);
-
-  @include t.md-up {
-    font-size: math.div(49, 18) * 1rem;
-    line-height: 3rem;
-  }
-
-  @include t.lg-up {
-    font-size: math.div(57, 18) * 1rem;
-    line-height: 3.75rem;
-  }
 }
 
 h2 {
-  font-size: math.div(24, 17) * 1rem;
-  line-height: 1.5rem;
-
-  @include t.md-up {
-    font-size: math.div(32, 18) * 1rem;
-    line-height: 2.25rem;
-  }
+  font-size: var(--step-2);
+  line-height: 1.3em;
 }
 
 h3 {
-  @include t.uppercase;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-code:not(pre code) {
-  background-color: var(--code-bg);
-  color: var(--code-color);
-  font-family: $font-mono;
-  font-size: 0.875em;
-  padding: 0.125em 0.5em;
-  border-radius: 0.125em;
-  border: solid 1px var(--code-border);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  font-size: var(--step-1);
+  line-height: 1.5em;
 }
 
 svg {
@@ -95,4 +67,8 @@ blockquote {
 figcaption {
   font-style: italic;
   font-size: smaller;
+}
+
+p {
+  max-width: 75ch;
 }

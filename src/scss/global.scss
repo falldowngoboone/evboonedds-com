@@ -1,5 +1,4 @@
 @use 'settings';
-@use 'generic.fonts' as fonts;
 @use 'generic.root' as root;
 @use 'generic.reset' as reset;
 @use 'elements';
@@ -10,4 +9,6 @@
 @use 'components.lists' as c-lists;
 @use 'components.links' as c-links;
 @use 'components.hero' as c-hero;
+@use 'components.block' as c-block;
+@use 'components.popover' as c-popover;
 @use 'utilities';

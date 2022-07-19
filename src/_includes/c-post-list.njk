@@ -4,7 +4,7 @@
 {% set headingEl %}{{ headingLevel | default("h2") }}{% endset %}
 <div>
   {% for post in postList %}
-    <article class="o-stack c-post-list__item">
+    <article class="o-flow c-post-list__item">
       <{{ headingEl }}>
         <a class="c-post-list__link" href="{{ post.url | url }}">
           {%- if post.data.title -%}

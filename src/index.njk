@@ -4,72 +4,91 @@ title: Home
 displayTitle: Exceptional dental and orthodontic care for all ages
 ---
 
-<header class="c-hero o-stack">
-  <img src="/images/hero-1.png" alt="A smiling woman receiving dental care.">
+<header class="o-block o-block--filled c-hero">
+  <img class="c-hero__image" src="/images/hero-1.png" alt="A smiling woman receiving dental care.">
+  <div class="o-flow">
     {% include "c-page-title.njk" %}
-  <p>
-    We desire to provide a caring, courteous environment for our patients and have an experienced, friendly staff who are
-    ready to give you the quality dental health care you deserve.
-  </p>
+    <p>
+      We desire to provide a caring, courteous environment for our patients and have an experienced, friendly staff who are
+      ready to give you the quality dental health care you deserve.
+    </p>
+    <p>
+      <a class="c-hero__cta" href="/#appointments">Book an appointment today!</a>
+    </p>
+  </div>
 </header>
-<article id="about" class="o-stack">
-  <h2>About</h2>
-  <img src="/images/dr-boone-portrait.png" alt="A portait of Dr Boone, smiling.">
-  <p>For over 40 years, we at Dr. E.V. Boone’s office have made patient well-being our top priority. We have provided
-    informative consultations, a variety of general dentistry, and orthodontic procedures in a comfortable, safe
-    environment. We are committed to the highest standards of dental care, continuing our educational training to offer
-    modern techniques and advancements for our patients.</p>
-  <p>Our facility uses the highest quality materials and state-of-the-art dental technology to give patients a notably
-    satisfying result. We also offer a full range of dental healthcare and treatment options for all ages based on
-    individual desires and needs. At Dr. Boone’s, we strive to provide the most excellent, comprehensive care possible.</p>
+<article id="about" class="o-block c-block c-block--about">
+  <h2 class="c-block__title">About</h2>
+  <img class="c-block__image" src="/images/dr-boone-portrait.png" alt="A portait of Dr Boone, smiling.">
+  <div class="c-block__content o-flow">
+    <p>For over 40 years, we at Dr. E.V. Boone’s office have made patient well-being our top priority. We have provided
+      informative consultations, a variety of general dentistry, and orthodontic procedures in a comfortable, safe
+      environment. We are committed to the highest standards of dental care, continuing our educational training to offer
+      modern techniques and advancements for our patients.</p>
+    <p>Our facility uses the highest quality materials and state-of-the-art dental technology to give patients a notably
+      satisfying result. We also offer a full range of dental healthcare and treatment options for all ages based on
+      individual desires and needs. At Dr. Boone’s, we strive to provide the most excellent, comprehensive care possible.</p>
+  </div>
 </article>
-<article id="services" class="o-stack">
-  <h2>Services</h2>
-  <h3>Orthodontics</h3>
-  <img src="/images/ortho.png" alt="A smiling woman holding invisible and traditional braces.">
-  <p>We understand how important it is to have confidence in your smile, which is why we are pleased to offer an array of
-    orthodontic services. Each patient’s needs are different and are evaluated individually. We will develop a treatment
-    plan that will best suit you.</p>
-  <p>We offer metal, porcelain, and invisible braces (SmartSmile) for children and adults. If you are interested in
-    finding out more about how orthodontics can help you achieve a beautiful smile, or for questions about our orthodontic
-    treatment options, please call our office at (409) 769-4433 to schedule an appointment.</p>
-  <h3>Cosmetic Dentistry</h3>
-  <img src="/images/cosmetic.png" alt="A mature, smiling couple sitting on a bench.">
-  <p>Your smile is important. That's why Dr. Boone works with high-quality materials and a full-service dental laboratory
-    to achieve accurate and comfortable results. We offer a full range of cosmetic services, from brightening your smile to
-    restoring proper mouth function, including eating and speaking.</p>
-  <ul>
-    <li>Porcelain Veneers</li>
-    <li>Fillings and Bonding</li>
-    <li>Dental Implants</li>
-    <li>Bridges</li>
-    <li>Dentures and Partials</li>
-    <li>Porcelain and Precious Metal Crowns</li>
-    <li>Teeth Whitening</li>
-  </ul>
-  <h3>Preventive Care</h3>
-  <img src="/images/preventive.png" alt="A young girl demonstrating how to brush on a prop tooth.">
-  <p>Regularly scheduled dental maintenance aids in overall health as well as reduces the chance of major long-term damage
-    and total dental costs. Dr. Boone's office offers routine oral examinations and cleanings to help keep your teeth
-    healthy.
-  </p>
-  <p>Our comprehensive exam includes a complete oral examination and a full mouth series of 20 x-rays or a panoramic film
-    and bite-wing x-rays used to screen for active decay and periodontal diseases. We will also discuss your dental history
-    and any options you may need to maintain healthy teeth and gums or restore problem areas, as well as review any
-    additional desires and/or concerns you may have.</p>
-  <p>Having a hygienist perform thorough, routine cleanings is one of the best preventative measures you can take to
-    maintain healthy teeth and gums. Our hygienists are licensed professionals who help evaluate problem areas and implement
-    treatment plans based on patient needs.</p>
+<article id="services" class="o-block o-block--filled c-block c-block--services">
+  <h2 class="c-block__title">Services</h2>
+  <div>
+    <h3>Orthodontics</h3>
+    <img src="/images/ortho.png" alt="A smiling woman holding invisible and traditional braces.">
+    <div class="o-flow">
+      <p>We understand how important it is to have confidence in your smile, which is why we are pleased to offer an array of
+        orthodontic services. Each patient’s needs are different and are evaluated individually. We will develop a treatment
+        plan that will best suit you.</p>
+      <p>We offer metal, porcelain, and invisible braces (SmartSmile) for children and adults. If you are interested in
+        finding out more about how orthodontics can help you achieve a beautiful smile, or for questions about our orthodontic
+        treatment options, please call our office at (409) 769-4433 to schedule an appointment.</p>
+    </div>
+  </div>
+  <div>
+    <h3>Cosmetic Dentistry</h3>
+    <img src="/images/cosmetic.png" alt="A mature, smiling couple sitting on a bench.">
+    <div class="o-flow">
+      <p>Your smile is important. That's why Dr. Boone works with high-quality materials and a full-service dental laboratory
+        to achieve accurate and comfortable results. We offer a full range of cosmetic services, from brightening your smile to
+        restoring proper mouth function, including eating and speaking.</p>
+      <ul>
+        <li>Porcelain Veneers</li>
+        <li>Fillings and Bonding</li>
+        <li>Dental Implants</li>
+        <li>Bridges</li>
+        <li>Dentures and Partials</li>
+        <li>Porcelain and Precious Metal Crowns</li>
+        <li>Teeth Whitening</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h3>Preventive Care</h3>
+    <img src="/images/preventive.png" alt="A young girl demonstrating how to brush on a prop tooth.">
+    <div class="o-flow">
+      <p>Regularly scheduled dental maintenance aids in overall health as well as reduces the chance of major long-term damage
+        and total dental costs. Dr. Boone's office offers routine oral examinations and cleanings to help keep your teeth
+        healthy.
+      </p>
+      <p>Our comprehensive exam includes a complete oral examination and a full mouth series of 20 x-rays or a panoramic film
+        and bite-wing x-rays used to screen for active decay and periodontal diseases. We will also discuss your dental history
+        and any options you may need to maintain healthy teeth and gums or restore problem areas, as well as review any
+        additional desires and/or concerns you may have.</p>
+      <p>Having a hygienist perform thorough, routine cleanings is one of the best preventative measures you can take to
+        maintain healthy teeth and gums. Our hygienists are licensed professionals who help evaluate problem areas and implement
+        treatment plans based on patient needs.</p>
+    </div>
+  </div>
 </article>
-<article id="contact" class="o-stack">
-  <h2>Contact</h2>
+<article id="contact" class="o-block c-block c-block--contact">
+  <h2 class="c-block__title">Contact</h2>
   <img src="/images/map.png" alt="A map showing Dr. Boone's office off of Main Street in Vidor.">
   <h3>Location</h3>
   <p>Dr. E.V. Boone<br/>1090 N Main Street<br/>Vidor, TX 77662-4357<br/>Phone: (409) 769-4433<br/>Fax: (409) 769-4418</p>
   <h3>Regular hours</h3>
   <p>Monday–Thursday<br>8:00 a.m. to 5:00 p.m.</p>
   <p>We observe most Federal holidays.</p>
-  <h3>Appointments and Cancelations</h3>
+  <h3 id="appointments">Appointments and Cancelations</h3>
   <p>To schedule an appointment, please call our office at (409) 769-4433. If for any reason you need to cancel or
     reschedule, please notify us by phone 24-hours in advance.</p>
   <h3>Insurance and Payment Options</h4>

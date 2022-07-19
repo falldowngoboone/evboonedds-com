@@ -13,8 +13,14 @@ $s-4: 2.5rem;
 $s-5: 4rem;
 $s-6: 6.5rem;
 
+$color-blue-100: #F4FAFD;
+$color-blue-200: #d7f2ff;
 $color-blue-700: #0028BB;
+$color-green-100: #EBF8E5;
+$color-green-200: #dcffcc;
 $color-red-700: #990000;
+$color-orange-500: #F47500;
+$color-orange-700: #f15c00;
 $color-purple: #6f00ff;
 $color-fuchsia: #df0036;
 $color-white: #fff;
@@ -32,3 +38,10 @@ $font-mono: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono WT',
   'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
   'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New',
   Courier, monospace;
+
+$color-link: $color-blue-700;
+$color-link-hover: $color-blue-700;
+
+$color-nav-link: $color-gray-900;
+$color-nav-link-hover: $color-orange-700;
+$color-nav-link-current: $color-orange-700;

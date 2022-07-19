@@ -1,34 +1,14 @@
 @use 'settings' as *;
 @use 'tools' as t;
 
-.o-cluster {
-  --space: 0.5em;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: t.neg(calc(var(--space) / 2));
-
-  & > *:not(.o-cluster) {
-    margin: calc(var(--space) / 2);
-  }
-
-  & > .o-cluster {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.o-stack {
-  --space: 1.5rem;
-
+.o-flow {
   & > * {
     margin-top: 0;
     margin-bottom: 0;
   }
 
   & > * + * {
-    margin-top: var(--space);
+    margin-top: var(--flow-space, 1em);
   }
 }
 
@@ -47,80 +27,49 @@
   width: 1px;
 }
 
-.l-page {
-  --page-row-gap: 1em;
-  --page-col-gap: 1em;
+.o-block {
+  padding: var(--space-s-2xl);
+}
+
+.o-block--filled {
+  background-color: var(--block-background-color, #eee);
+  border-radius: 8px;
+}
+
+.l-page-grid {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [main-start] minmax(0, var(--page-grid-max-width, 1920px)) [main-end] 1fr [full-end];
+  row-gap: var(--page-grid-gap-row, 1em);
+  column-gap: var(--page-grid-gap-col, 1em);
+}
+
+.l-page-grid > header {
+  grid-column: main;
+}
+
+.l-page-grid > main {
+  grid-column: main;
+}
+
+.l-page-grid > footer {
+  grid-column: full;
 
   display: grid;
-  grid-template-columns: 1fr minmax(0, 1920px) 1fr;
-  row-gap: var(--page-row-gap);
-  column-gap: var(--page-col-gap);
+  grid-template-columns: 1fr minmax(0, var(--page-grid-max-width, 1920px)) 1fr;
+  row-gap: var(--page-grid-gap-row, 1em);
+  column-gap: var(--page-grid-gap-col, 1em);
 
   & > * {
     grid-column: 2 / 3;
   }
+}
 
-  @include t.md-up {
-    --page-row-gap: 2em;
-    --page-col-gap: 3em;
-  }
+.l-section-grid {
+  display: grid;
 }
 
 .l-container {
   max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
-}
-
-.l-content {
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    position: relative; // used for positioning anchor links
-    padding-right: 1.4rem;
-    scroll-margin-top: var(--space);
-  }
-
-  & h2 {
-    --space: 3rem;
-  }
-
-  & h3 {
-    --space: 1.5rem;
-  }
-
-  & h2 + *,
-  & h3 + * {
-    --space: 0.75rem;
-  }
-
-  & li + li {
-    margin-top: 0.75rem;
-  }
-
-  & li > * + * {
-    margin-top: 0.75rem;
-  }
-
-  & figure > * + * {
-    margin-top: 0.5rem;
-  }
-}
-
-.l-split {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4.5rem;
-
-  & > *:first-child {
-    flex: 3;
-    min-width: 20rem;
-  }
-
-  & > *:last-child {
-    flex: 2;
-    min-width: 20rem;
-  }
 }

@@ -144,3 +144,7 @@ th:not([align]) {
     scroll-behavior: auto !important;
   }
 }
+
+:target {
+  scroll-margin-top: 8ex;
+}
