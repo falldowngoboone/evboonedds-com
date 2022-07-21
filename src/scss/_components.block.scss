@@ -36,4 +36,40 @@
 
 .c-block--services {
   --block-background-color: var(--services-background-color);
+
+  grid-template-areas: "title""content";
+}
+
+.c-block--contact {
+  --block-background-color: var(--services-background-color);
+
+  grid-template-areas: "title""content";
+}
+
+.c-spicy-block {
+  display: grid;
+  grid-template-areas: "heading""image""content";
+  grid-template-rows: auto 1fr;
+  gap: var(--space-l, 1em) var(--space-s-xl, 1em);
+
+  @media screen and (min-width: 890px) {
+    grid-template-areas: "image heading""image content";
+    gap: var(--space-s, 1em) var(--space-s-xl, 1em);
+
+    &[data-direction=reverse] {
+      grid-template-areas: "heading image""content image";
+    }
+  }
+}
+
+.c-spicy-block__heading {
+  grid-area: heading;
+}
+
+.c-spicy-block__image {
+  grid-area: image;
+}
+
+.c-spicy-block__content {
+  grid-area: content;
 }
