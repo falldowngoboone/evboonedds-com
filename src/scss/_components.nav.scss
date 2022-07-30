@@ -1,27 +1,38 @@
 @use 'settings' as *;
 @use 'tools' as t;
 
+:where(#collapsible-site-nav #site-nav-panel) {
+  right: 0;
+  width: calc(100vw - 2 * var(--page-grid-gap-col));
+  box-sizing: border-box;
+}
+
 .c-nav {
   display: flex;
   gap: calc(var(--link-padding) * 2);
   align-items: center;
   flex-wrap: wrap;
+
+  :where(#collapsible-site-nav) & {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .c-nav-item {
   @include t.uppercase;
-    font-weight: 700;
-    text-decoration: none;
-    position: relative;
-    color: $color-nav-link;
-  
-    &:hover {
-      cursor: pointer;
-      color: $color-nav-link-hover;
-    }
-  
-    &[aria-current='page'] {
-      color: $color-nav-link-current;
-      text-decoration: underline;
-    }
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  color: $color-nav-link;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-nav-link-hover;
+  }
+
+  &[aria-current='page'] {
+    color: $color-nav-link-current;
+    text-decoration: underline;
+  }
 }

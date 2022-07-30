@@ -2,35 +2,42 @@
 layout: default
 title: Home
 displayTitle: Quality dental and orthodontic care for all ages
+scriptContent: |
+  <script type="module" src="js/disclosure.js"></script>
+  <script type="module" src="js/site-nav.js"></script>
 ---
 
-<header class="o-block o-block--filled c-hero">
-  <img class="c-hero__image" src="/images/hero-1.png" alt="A smiling woman receiving dental care.">
-  <div class="o-flow">
-    {% include "c-page-title.njk" %}
-    <p>
-      We desire to provide a caring, courteous environment for our patients and have an experienced, friendly staff who are
-      ready to give you the quality dental health care you deserve.
-    </p>
-    <p>
-      <a class="c-hero__cta" href="/#appointments">Book an appointment today!</a>
-    </p>
+<header class="c-block">
+  <div class="l-split c-block__content">
+    <img src="/images/hero-1.png" alt="A smiling woman receiving dental care.">
+    <div class="o-flow">
+      {% include "c-page-title.njk" %}
+      <p>
+        We desire to provide a caring, courteous environment for our patients and have an experienced, friendly staff who are
+        ready to give you the quality dental health care you deserve.
+      </p>
+      <p>
+        <a class="c-hero__cta" href="/#appointments">Book an appointment today!</a>
+      </p>
+    </div>
   </div>
 </header>
-<article id="about" class="o-block c-block c-block--about">
+<article id="about" class="o-flow c-block">
   <h2 class="c-block__title">About</h2>
-  <img class="c-block__image" src="/images/dr-boone-portrait.png" alt="A portait of Dr Boone, smiling.">
-  <div class="c-block__content o-flow">
-    <p>For over 40 years, we at Dr. E.V. Boone’s office have made patient well-being our top priority. We have provided
-      informative consultations, a variety of general dentistry, and orthodontic procedures in a comfortable, safe
-      environment. We are committed to the highest standards of dental care, continuing our educational training to offer
-      modern techniques and advancements for our patients.</p>
-    <p>Our facility uses the highest quality materials and state-of-the-art dental technology to give patients a notably
-      satisfying result. We also offer a full range of dental healthcare and treatment options for all ages based on
-      individual desires and needs. At Dr. Boone’s, we strive to provide the most excellent, comprehensive care possible.</p>
+  <div class="l-split c-block__content" data-layout="1:3 reverse">
+    <img class="c-block__image" src="/images/dr-boone-portrait.png" alt="A portait of Dr Boone, smiling.">
+    <div class="o-flow">
+      <p>For over 40 years, we at Dr. E.V. Boone’s office have made patient well-being our top priority. We have provided
+        informative consultations, a variety of general dentistry, and orthodontic procedures in a comfortable, safe
+        environment. We are committed to the highest standards of dental care, continuing our educational training to offer
+        modern techniques and advancements for our patients.</p>
+      <p>Our facility uses the highest quality materials and state-of-the-art dental technology to give patients a notably
+        satisfying result. We also offer a full range of dental healthcare and treatment options for all ages based on
+        individual desires and needs. At Dr. Boone’s, we strive to provide the most excellent, comprehensive care possible.</p>
+    </div>
   </div>
 </article>
-<article id="services" class="o-block o-block--filled c-block c-block--services">
+<article id="services" class="o-flow c-block">
   <h2 class="c-block__title">Services</h2>
   <div class="c-block__content o-flow">
     <div class="c-spicy-block">
@@ -102,26 +109,36 @@ displayTitle: Quality dental and orthodontic care for all ages
     </div>
   </div>
 </article>
-<article id="contact" class="o-block c-block c-block--contact">
+<article id="contact" class="o-flow c-block">
   <h2 class="c-block__title">Contact</h2>
-  <div class="c-block__content">
-    <img src="/images/map.png" alt="A map showing Dr. Boone's office off of Main Street in Vidor.">
-    <h3>Location</h3>
-    <p>Dr. E.V. Boone<br/>1090 N Main Street<br/>Vidor, TX 77662-4357<br/>Phone: (409) 769-4433<br/>Fax: (409) 769-4418</p>
-    <h3>Regular hours</h3>
-    <p>Monday–Thursday<br>8:00 a.m. to 5:00 p.m.</p>
-    <p>We observe most Federal holidays.</p>
-    <h3 id="appointments">Appointments and Cancelations</h3>
-    <p>To schedule an appointment, please call our office at (409) 769-4433. If for any reason you need to cancel or
-      reschedule, please notify us by phone 24-hours in advance.</p>
-    <h3>Insurance and Payment Options</h4>
-    <p>Our office accepts most insurance plans, and we will gladly submit all insurance claims for you in a timely manner.
-      We accept check, cash, or any major credit card.</p>
-    <p>To help you afford the treatments you need and want, we have also partnered with CareCredit, a payment program that
-      gives patients a cost conscious financial option when paying medical expenses. Once approved, you can begin treatments
-      when needed and pay in monthly installments depending upon the plan you choose. Please visit
-      <a href="http://www.carecredit.com/">CareCredit.com</a>
-      for more information.</p>
-    <p>If you have questions regarding insurance information and payment options, call our office today at (409) 769-4433.</p>
+  <div class="o-flow c-block__content">
+    <div class="l-split" data-layout="3:1">
+      <img src="/images/map.png" alt="A map showing Dr. Boone's office off of Main Street in Vidor.">
+      <div class="o-flow">
+        <h3>Location</h3>
+        <p>Dr. E.V. Boone<br/>1090 N Main Street<br/>Vidor, TX 77662-4357<br/>Phone: (409) 769-4433<br/>Fax: (409) 769-4418</p>
+        <h3>Regular hours</h3>
+        <p>Monday–Thursday<br>8:00 a.m. to 5:00 p.m.</p>
+        <p>We observe most Federal holidays.</p>
+      </div>
+    </div>
+    <div class="l-split" data-layout="1:3">
+      <div class="o-flow">
+        <h3 id="appointments">Appointments and Cancelations</h3>
+        <p>To schedule an appointment, please call our office at (409) 769-4433. If for any reason you need to cancel or
+          reschedule, please notify us by phone 24-hours in advance.</p>
+      </div>
+      <div class="o-flow">
+        <h3>Insurance and Payment Options</h4>
+        <p>Our office accepts most insurance plans, and we will gladly submit all insurance claims for you in a timely manner.
+          We accept check, cash, or any major credit card.</p>
+        <p>To help you afford the treatments you need and want, we have also partnered with CareCredit, a payment program that
+          gives patients a cost conscious financial option when paying medical expenses. Once approved, you can begin treatments
+          when needed and pay in monthly installments depending upon the plan you choose. Please visit
+          <a href="http://www.carecredit.com/">CareCredit.com</a>
+          for more information.</p>
+        <p>If you have questions regarding insurance information and payment options, call our office today at (409) 769-4433.</p>
+      </div>
+    </div>
   </div>
 </article>

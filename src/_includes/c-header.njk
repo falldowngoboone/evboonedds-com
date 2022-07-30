@@ -7,28 +7,23 @@
     <picture><source media="(min-width: 640px)" srcset="/images/logo.svg"/><img class="c-header__branding" src="/images/logo-sm.svg" alt=""/>
     </picture>
   </a>
-  <nav>
-    <ul class="c-nav">
-      <li>
-        <a class="c-nav-item" href="/#about">About</a>
-      </li>
-      <li>
-        <a class="c-nav-item" href="/#services">Services</a>
-      </li>
-      <li>
-        <details class="c-popover">
-          <summary class="c-nav-item">New Patient Forms</summary>
-          <div>
-            <ul>
-              <li><a href="/downloads/form.pdf" target="_blank">Adult Patient Form</a></li>
-              <li><a href="/downloads/child-form.pdf" target="_blank">Child Patient Form</a></li>
-            </ul>
-          </div>
-        </details>
-      </li>
-      <li>
-        <a class="c-nav-item" href="/#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
+  {% include "c-site-nav.njk" %}
 </header>
+<template id="site-nav-toggle-template">
+  <button id="site-nav-toggle">Menu</button>
+</template>
+<template id="site-nav-dialog-template">
+  <dialog id="site-nav-dialog"></dialog>
+</template>
+<template id="site-nav-template">
+  {% include "c-site-nav.njk" %}
+</template>
+<template id="collapsible-site-nav-template">
+  <details id="collapsible-site-nav" data-disclosure>
+    <summary id="site-nav-toggle" class="c-nav-toggle">Menu</summary>
+    <div id="site-nav-panel">
+      {% set isMobile = true %}
+      {% include "c-site-nav.njk" %}
+    </div>
+  </details>
+</template>

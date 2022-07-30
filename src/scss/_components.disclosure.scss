@@ -1,0 +1,16 @@
+[data-disclosure] {
+  position: relative;
+
+  & > :where(summary + *) {
+    position: absolute;
+    background-color: var(--disclosure-panel-background-color, white);
+    padding: var(--disclosure-panel-padding, var(--space-s, 1em));
+    border-radius: var(--disclosure-panel-border-radius, 8px);
+    box-shadow: 0.3px 0.5px 0.6px hsl(var(--shadow-color, 0deg 0% 52%) / 0.67),
+      0.7px 1.4px 1.5px -1.2px hsl(var(--shadow-color, 0deg 0% 52%) / 0.57),
+      2.1px 4.3px 4.6px -2.4px hsl(var(--shadow-color, 0deg 0% 52%) / 0.47),
+      5.7px 11.5px 12.4px -3.5px hsl(var(--shadow-color, 0deg 0% 52%) / 0.37);
+    border: 1px solid #efefef;
+    z-index: var(--disclosure-panel-layer);
+  }
+}

@@ -1,0 +1,28 @@
+<nav id="site-nav">
+  <ul class="c-nav" role="list">
+    <li>
+      <a class="c-nav-item" href="/#about">About</a>
+    </li>
+    <li>
+      <a class="c-nav-item" href="/#services">Services</a>
+    </li>
+    <li>
+      <details {% if not isMobile %} data-disclosure="data-disclosure" {% endif %}>
+        <summary class="c-nav-item">New Patient Forms</summary>
+        <div>
+          <ul role="list">
+            <li>
+              <a href="/downloads/form.pdf" target="_blank">Adult Patient Form</a>
+            </li>
+            <li>
+              <a href="/downloads/child-form.pdf" target="_blank">Child Patient Form</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </li>
+    <li>
+      <a class="c-nav-item" href="/#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
