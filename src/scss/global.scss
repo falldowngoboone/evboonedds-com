@@ -3,6 +3,7 @@
 @use 'generic.reset' as reset;
 @use 'elements';
 @use 'objects';
+@use 'layout';
 @use 'components.header' as c-header;
 @use 'components.nav' as c-nav;
 @use 'components.footer' as c-footer;

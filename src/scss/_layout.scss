@@ -1,0 +1,6 @@
+@use 'settings' as *;
+
+.l-container {
+  max-width: $container-max-width;
+  margin-inline: auto;
+}

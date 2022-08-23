@@ -13,13 +13,13 @@ $s-4: 2.5rem;
 $s-5: 4rem;
 $s-6: 6.5rem;
 
-$color-blue-100: #F4FAFD;
+$color-blue-100: #f4fafd;
 $color-blue-200: #d7f2ff;
-$color-blue-700: #0028BB;
-$color-green-100: #EBF8E5;
+$color-blue-700: #0028bb;
+$color-green-100: #ebf8e5;
 $color-green-200: #dcffcc;
 $color-red-700: #990000;
-$color-orange-500: #F47500;
+$color-orange-500: #f47500;
 $color-orange-700: #f15c00;
 $color-purple: #6f00ff;
 $color-fuchsia: #df0036;
@@ -33,7 +33,7 @@ $color-black: $color-gray-900;
 $font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
   Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 $font-body: 'Open Sans', $font-system;
-$font-display: 'Merriweather', Georgia, Times, 'Times New Roman', serif;
+$font-display: 'Montserrat', 'Trebuchet MS', Helvetica, sans-serif;
 $font-mono: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono WT',
   'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
   'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New',
@@ -45,3 +45,5 @@ $color-link-hover: $color-blue-700;
 $color-nav-link: $color-gray-900;
 $color-nav-link-hover: $color-orange-700;
 $color-nav-link-current: $color-orange-700;
+
+$container-max-width: 1680px;
