@@ -7,6 +7,7 @@ $hero-bp: 720px;
 }
 
 .c-hero {
+  position: relative;
   background: var(--hero-background-color, #eee);
   display: grid;
   grid-template-columns: 0 1fr 1fr 0;

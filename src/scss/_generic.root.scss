@@ -3,14 +3,14 @@
 @use 'tools' as t;
 
 :root {
-  --step--2: clamp(0.45rem, calc(0.75rem + -0.29vw), 0.69rem);
-  --step--1: clamp(0.75rem, calc(0.85rem + -0.1vw), 0.83rem);
-  --step-0: clamp(1rem, calc(0.94rem + 0.29vw), 1.25rem);
-  --step-1: clamp(1.2rem, calc(0.99rem + 1.04vw), 2.08rem);
-  --step-2: clamp(1.44rem, calc(0.96rem + 2.39vw), 3.47rem);
-  --step-3: clamp(1.73rem, calc(0.77rem + 4.78vw), 5.79rem);
-  --step-4: clamp(2.07rem, calc(0.29rem + 8.92vw), 9.65rem);
-  --step-5: clamp(2.49rem, calc(-0.71rem + 16vw), 16.09rem);
+  --step--2: clamp(0.45rem, calc(0.75rem + -0.29vw), 0.69rem); // 7.2 - 11.04
+  --step--1: clamp(0.75rem, calc(0.85rem + -0.1vw), 0.83rem); // 12 - 13.28
+  --step-0: clamp(1rem, calc(0.94rem + 0.29vw), 1.25rem); // 16 - 20
+  --step-1: clamp(1.2rem, calc(0.99rem + 1.04vw), 2.08rem); // 19.2 - 33.28
+  --step-2: clamp(1.44rem, calc(0.96rem + 2.39vw), 3.47rem); // 23.04 - 55.52
+  --step-3: clamp(1.73rem, calc(0.77rem + 4.78vw), 5.79rem); // 27.68 - 92.64
+  --step-4: clamp(2.07rem, calc(0.29rem + 8.92vw), 9.65rem); // 33.12 - 154.4
+  --step-5: clamp(2.49rem, calc(-0.71rem + 16vw), 16.09rem); // 39.84 - 257.44
 
   --space-3xs: clamp(0.25rem, calc(0.24rem + 0.07vw), 0.31rem);
   --space-2xs: clamp(0.5rem, calc(0.47rem + 0.15vw), 0.63rem);
@@ -51,8 +51,8 @@
   --color-bg-secondary: #{$color-gray-200};
   --color-border: #{$color-gray-500};
 
-  --color-heading: #{$color-blue-700};
-  --color-subheading: #{$color-blue-700};
+  --color-heading: #{$color-blue-800};
+  --color-subheading: #{$color-blue-800};
 
   --link-padding: 0.5em;
 
@@ -68,14 +68,14 @@
   --hero-cta-background-color: #{$color-orange-500};
   --hero-cta-text-color: #{$color-white};
 
-  --block-padding: var(--space-xs-3xl);
+  --block-padding: calc(2 * var(--space-3xs-l));
   --block-border-radius: 8px;
-  --block-services-background-color: #{$color-green-200};
+  --block-services-background-color: #{$color-gray-200};
 
   --flow-space: var(--space-m);
 
-  --footer-background-color: #{$color-gray-900};
-  --footer-text-color: #{$color-blue-200};
+  --footer-background-color: #{$color-blue-900};
+  --footer-text-color: #{$color-blue-400};
 
   --disclosure-panel-layer: var(--layer-1);
 }
