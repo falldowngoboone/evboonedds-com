@@ -2,6 +2,9 @@
 @use 'settings' as *;
 @use 'tools' as t;
 
+// Sizing from Utopia: https://utopia.fyi
+// Formula for clamp: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+
 :root {
   --step--2: clamp(0.45rem, calc(0.75rem + -0.29vw), 0.69rem); // 7.2 - 11.04
   --step--1: clamp(0.75rem, calc(0.85rem + -0.1vw), 0.83rem); // 12 - 13.28
@@ -12,34 +15,37 @@
   --step-4: clamp(2.07rem, calc(0.29rem + 8.92vw), 9.65rem); // 33.12 - 154.4
   --step-5: clamp(2.49rem, calc(-0.71rem + 16vw), 16.09rem); // 39.84 - 257.44
 
-  --space-3xs: clamp(0.25rem, calc(0.24rem + 0.07vw), 0.31rem);
-  --space-2xs: clamp(0.5rem, calc(0.47rem + 0.15vw), 0.63rem);
-  --space-xs: clamp(0.75rem, calc(0.71rem + 0.22vw), 0.94rem);
-  --space-s: clamp(1rem, calc(0.94rem + 0.29vw), 1.25rem);
-  --space-m: clamp(1.5rem, calc(1.41rem + 0.44vw), 1.88rem);
-  --space-l: clamp(2rem, calc(1.88rem + 0.59vw), 2.5rem);
-  --space-xl: clamp(3rem, calc(2.82rem + 0.88vw), 3.75rem);
-  --space-2xl: clamp(4rem, calc(3.76rem + 1.18vw), 5rem);
-  --space-3xl: clamp(6rem, calc(5.65rem + 1.76vw), 7.5rem);
+  --space-3xs: clamp(0.25rem, calc(0.24rem + 0.07vw), 0.31rem); // 4 - 4.96
+  --space-2xs: clamp(0.5rem, calc(0.47rem + 0.15vw), 0.63rem); // 8 - 10.08
+  --space-xs: clamp(0.75rem, calc(0.71rem + 0.22vw), 0.94rem); // 12 - 15.04
+  --space-s: clamp(1rem, calc(0.94rem + 0.29vw), 1.25rem); // 16 - 20
+  --space-m: clamp(1.5rem, calc(1.41rem + 0.44vw), 1.88rem); // 24 - 30.08
+  --space-l: clamp(2rem, calc(1.88rem + 0.59vw), 2.5rem); // 32 - 40
+  --space-xl: clamp(3rem, calc(2.82rem + 0.88vw), 3.75rem); // 48 - 60
+  --space-2xl: clamp(4rem, calc(3.76rem + 1.18vw), 5rem); // 64 - 80
+  --space-3xl: clamp(6rem, calc(5.65rem + 1.76vw), 7.5rem); // 96 - 120
 
   /* One-up pairs */
-  --space-3xs-2xs: clamp(0.25rem, calc(0.16rem + 0.44vw), 0.63rem);
-  --space-2xs-xs: clamp(0.5rem, calc(0.4rem + 0.51vw), 0.94rem);
-  --space-xs-s: clamp(0.75rem, calc(0.63rem + 0.59vw), 1.25rem);
-  --space-s-m: clamp(1rem, calc(0.79rem + 1.03vw), 1.88rem);
-  --space-m-l: clamp(1.5rem, calc(1.26rem + 1.18vw), 2.5rem);
-  --space-l-xl: clamp(2rem, calc(1.59rem + 2.06vw), 3.75rem);
-  --space-xl-2xl: clamp(3rem, calc(2.53rem + 2.35vw), 5rem);
-  --space-2xl-3xl: clamp(4rem, calc(3.18rem + 4.12vw), 7.5rem);
+  --space-3xs-2xs: clamp(0.25rem, calc(0.16rem + 0.44vw), 0.63rem); // 4 - 10.08
+  --space-2xs-xs: clamp(0.5rem, calc(0.4rem + 0.51vw), 0.94rem); // 8 - 15.04
+  --space-xs-s: clamp(0.75rem, calc(0.63rem + 0.59vw), 1.25rem); // 12 - 20
+  --space-s-m: clamp(1rem, calc(0.79rem + 1.03vw), 1.88rem); // 16 - 30.08
+  --space-m-l: clamp(1.5rem, calc(1.26rem + 1.18vw), 2.5rem); // 24 - 40
+  --space-l-xl: clamp(2rem, calc(1.59rem + 2.06vw), 3.75rem); // 32 - 60
+  --space-xl-2xl: clamp(3rem, calc(2.53rem + 2.35vw), 5rem); // 48 - 80
+  --space-2xl-3xl: clamp(4rem, calc(3.18rem + 4.12vw), 7.5rem); // 64 - 120
 
   /* Custom pairs */
-  --space-xs-3xl: clamp(0.75rem, calc(-0.84rem + 7.94vw), 7.5rem);
-  --space-s-l: clamp(1rem, calc(0.65rem + 1.76vw), 2.5rem);
-  --space-s-xl: clamp(1rem, calc(0.35rem + 3.24vw), 3.75rem);
-  --space-s-2xl: clamp(1rem, calc(0.06rem + 4.71vw), 5rem);
-  --space-l-3xl: clamp(2rem, calc(0.71rem + 6.47vw), 7.5rem);
-  --space-3xs-l: clamp(0.25rem, calc(-0.28rem + 2.65vw), 2.5rem);
-  --space-3xs-3xl: clamp(0.25rem, calc(-1.46rem + 8.53vw), 7.5rem);
+  --space-xs-3xl: clamp(0.75rem, calc(-0.84rem + 7.94vw), 7.5rem); // 12 - 120
+  --space-s-l: clamp(1rem, calc(0.65rem + 1.76vw), 2.5rem); // 16 - 40
+  --space-s-xl: clamp(1rem, calc(0.35rem + 3.24vw), 3.75rem); // 16 - 60
+  --space-s-2xl: clamp(1rem, calc(0.06rem + 4.71vw), 5rem); // 16 - 80
+  --space-l-3xl: clamp(2rem, calc(0.71rem + 6.47vw), 7.5rem); // 32 - 120
+  --space-3xs-l: clamp(0.25rem, calc(-0.28rem + 2.65vw), 2.5rem); // 4 - 40
+  --space-3xs-3xl: clamp(0.25rem, calc(-1.46rem + 8.53vw), 7.5rem); // 4 - 120
+
+  // 170 is not in our scale...
+  --space-x-outside: clamp(0.5rem, calc(-1.9rem + 12vw), 10.625rem); // 8 - 170
 
   --layer-1: 1;
 
@@ -71,8 +77,6 @@
   --block-padding: calc(2 * var(--space-3xs-l));
   --block-border-radius: 8px;
   --block-services-background-color: #{$color-gray-200};
-
-  --flow-space: var(--space-m);
 
   --footer-background-color: #{$color-blue-900};
   --footer-text-color: #{$color-blue-400};
