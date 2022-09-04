@@ -6,11 +6,14 @@ $block-bp: 900px;
   }
 }
 
+.c-block__intro {
+  max-width: calc(900px + 2 * var(--space-x-outside));
+  text-align: center;
+  margin-inline: auto;
+  padding: var(--space-2xl) var(--space-x-outside);
+}
+
 .c-block:where(#about) {
-  display: grid;
-  grid-template-columns: var(--space-x-outside) 8fr var(--space-3xs-l) 5fr var(
-      --space-x-outside
-    );
   background: no-repeat bottom -300px right -300px url('/images/bg-blur.png');
 
   & > .c-block__content {
@@ -45,19 +48,36 @@ $block-bp: 900px;
 
 .c-block:where(#services) {
   background-color: var(--block-services-background-color);
+  padding-block-end: var(--space-2xl);
+
+  .l-split {
+    row-gap: var(--space-xl);
+  }
+
+  .c-service {
+    --flow-space: var(--space-s);
+
+    grid-column: 2 / 5;
+  }
+
+  @media screen and (min-width: 720px) {
+    .c-service {
+      grid-column: 2 / 3;
+    }
+
+    .c-service:nth-child(even) {
+      grid-column: 4 / 5;
+    }
+  }
 }
 
-.c-grid--contact {
-  display: grid;
-  grid-template-columns: var(--space-x-outside) 8fr var(--space-3xs-l) 5fr var(
-      --space-x-outside
-    );
-
-  & > .c-block__location {
+.c-block:where(#contact) {
+  & .c-block__location {
     grid-column: 2 / 5;
     background-color: var(--block-services-background-color);
     padding: var(--space-l);
     margin-top: -6.25rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
     @include block-mq {
       grid-column: 4 / 5;
@@ -67,7 +87,7 @@ $block-bp: 900px;
     }
   }
 
-  & > .c-block__appointments {
+  & .c-block__appointments {
     grid-column: 2 / 5;
     padding: var(--space-l) 0 var(--space-2xl);
 
@@ -76,11 +96,4 @@ $block-bp: 900px;
       grid-row: 1 / 2;
     }
   }
-}
-
-.c-block__intro {
-  max-width: calc(900px + 2 * var(--space-x-outside));
-  text-align: center;
-  margin-inline: auto;
-  padding: var(--space-2xl) var(--space-x-outside);
 }

@@ -4,3 +4,15 @@
   max-width: $container-max-width;
   margin-inline: auto;
 }
+
+.l-split {
+  display: grid;
+  grid-template-columns:
+    var(--space-x-outside) var(--col-1-width, 1fr) var(--space-m-l)
+    var(--col-2-width, 1fr) var(--space-x-outside);
+}
+
+.l-split[data-split='8/5'] {
+  --col-1-width: 8fr;
+  --col-2-width: 5fr;
+}

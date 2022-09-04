@@ -9,10 +9,6 @@ $hero-bp: 900px;
 .c-hero {
   position: relative;
   background: var(--hero-background-color, #eee);
-  display: grid;
-  grid-template-columns: var(--space-x-outside) 1fr var(--space-3xs-l) 1fr var(
-      --space-x-outside
-    );
 
   & p {
     max-width: 50ch;
@@ -43,7 +39,7 @@ $hero-bp: 900px;
 
   @include hero-mq {
     padding: 0;
-    grid-column: 4 / 5;
+    grid-column: 3 / 5;
     grid-row: 1 / 2;
     max-width: unset;
   }
