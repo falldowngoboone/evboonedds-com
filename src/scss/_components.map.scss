@@ -3,4 +3,14 @@
   background-color: #ddd;
   height: 75vh;
   width: 100%;
+
+  & > iframe {
+    width: 100%;
+    height: 100%;
+
+    .gm-inset-map,
+    .gm-bundled-control {
+      display: none;
+    }
+  }
 }

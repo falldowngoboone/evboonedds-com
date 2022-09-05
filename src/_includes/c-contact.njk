@@ -4,7 +4,14 @@
     <p>We are conveniently located on North Main Street in Vidor, next to Bar B Western Store. For&nbsp;appointments, please
       call during business hours.</p>
   </div>
-  <div id="map" class="c-map"></div>
+  <div id="map" class="c-map">
+    <iframe
+      id="map-frame"
+      loading="lazy"
+      allowfullscreen="allowfullscreen"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key={{site.SAFE_TOKENS.googleMapsApi}}&q=Boone+Eugene+V+DDS"></iframe>
+  </div>
   <div class="l-split c-grid--contact" data-split="8/5">
     <div class="o-flow c-block__location">
       <h3>Our Location</h3>

@@ -2,5 +2,8 @@
   "name": "E.V. Boone, DDS",
   "title": "Quality Dental Health Care You Deserve",
   "description": "Committed to the highest standards of dental care for all ages.",
-  "url": "https://www.evboonedds.com"
+  "url": "https://www.evboonedds.com",
+  "SAFE_TOKENS": {
+    "googleMapsApi": "AIzaSyCLTTST-24CXQPck0T9oe2ALMfyCfTHS4I"
+  }
 }
